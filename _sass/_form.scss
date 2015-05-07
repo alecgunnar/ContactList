@@ -1,0 +1,42 @@
+.field input,
+.field select,
+.buttons button {
+    font-size: 1em;
+}
+
+.field {
+  margin-bottom: 20px;
+
+  input,
+  select {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    outline: none;
+  }
+}
+
+.buttons {
+  text-align: center;
+
+  button {
+    background: $bright-blue;
+    background-image: linear-gradient(to bottom, $light-blue 10%, $bright-blue);
+    color: #FFF;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &.close {
+      background: #A00;
+      background-image: linear-gradient(to bottom, lighten(#A00, 10%) 10%, #A00);
+      color: #FFF;
+      float: none;
+    }
+
+    &:hover {
+      background-image: none;
+    }
+  }
+}

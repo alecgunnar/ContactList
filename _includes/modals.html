@@ -1,0 +1,36 @@
+<div class="shadow" id="modal-shadow"></div>
+<div class="modal" id="contact-modal">
+  <div class="close">X</div>
+  <h2>Managing Contact</h2>
+  <div class="errors"></div>
+  <input type="hidden" id="idx" />
+  <div class="field">
+    <label for="name">Name</label>
+    <input type="text" id="name" />
+  </div>
+  <div class="field">
+    <label for="email">Email Address</label>
+    <input type="email" id="email" />
+  </div>
+  <div class="field">
+    <label for="phone">Phone Number</label>
+    <input type="text" id="phone" />
+  </div>
+  <div class="field">
+    <label for="position">Position</label>
+    <select id="position">
+      <option value="" disabled>Choose a Position</option>
+      <option value="0">Member</option>
+      <option value="1">Executive/Lead</option>
+      <option value="2">Advisor</option>
+    </select>
+  </div>
+  <div class="buttons">
+    <button id="save">Save</button>
+    <button class="close">Cancel</button>
+  </div>
+</div>
+<div class="modal" id="export-modal">
+  <div class="close">X</div>
+  <h2>Export Contacts</h2>
+</div>
