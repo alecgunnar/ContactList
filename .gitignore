@@ -2,3 +2,4 @@ _site
 .sass-cache
 bower_components
 js/jsx/.module-cache
+data.json
