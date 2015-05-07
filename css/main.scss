@@ -29,8 +29,9 @@ $on-laptop:        800px;
 
 // Colors
 $bright-orange: #F60;
-$light-orange: lighten($bright-orange, 5%);
+$light-orange: lighten($bright-orange, 10%);
 $bright-blue: #39F;
+$light-blue: lighten($bright-blue, 10%);
 
 
 
@@ -47,7 +48,34 @@ $bright-blue: #39F;
     }
 }
 
+.orange-buttons {
+  ul {
+    margin: 0;
+    padding: 0;
 
+    li {
+      list-style: none;
+      display: inline-block;
+      margin-left: 5px;
+
+      a,
+      button {
+        background-color: $bright-orange;
+        background-image: linear-gradient(to bottom, $light-orange 10%, $bright-orange);
+        color: #FFF;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 15px;
+        border: 0;
+        cursor: pointer;
+
+        &:hover {
+          background: $light-orange;
+        }
+      }
+    }
+  }
+}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "base";
+@import "base", "modals", "form";

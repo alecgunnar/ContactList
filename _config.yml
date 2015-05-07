@@ -4,5 +4,9 @@ title: "Sunseeker Contact Manager"
 url: "http://0.0.0.0:4000"
 baseurl: ""
 
+jsx_compile_to: "js/jsx/"
+
+version: "1.0.0 Beta"
+
 # Build settings
 markdown: kramdown

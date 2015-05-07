@@ -6,12 +6,15 @@
   <body>
 
     {% include header.html %}
+    {% include modals.html %}
 
     <main>
       <div class="wrapper">
         {{ content }}
       </div>
     </main>
+
+    <script src="{% jsx contacts_manager.js %}"></script>
 
   </body>
 

@@ -1,6 +1,7 @@
 body {
   font-family: $base-font-family;
   font-size: $base-font-size;
+  font-weight: 100;
   margin: 0;
   padding: 0;
 }
@@ -9,42 +10,52 @@ body {
   width: 100%;
 }
 
+.header-messages {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  #error,
+  #notice {
+    color: #FFF;
+    width: 500px;
+    margin: 10px auto;
+    padding: 10px;
+    display: none;
+  }
+
+  #error {
+    background: #A00;
+  }
+
+  #notice {
+    background: #0A0;
+  }
+}
+
 header {
   background: $bright-blue;
+  background-image: linear-gradient(to bottom right, $light-blue 10%, $bright-blue);
   color: #FFF;
   line-height: 4em;
   padding: 0 10px;
 
   .branding {
-    font-weight: 100;
     font-size: 1.5em;
+
+    .version {
+      font-size: .5em;
+      display: inline-block;
+      margin-left: 10px;
+    }
   }
 
   .options {
     float: right;
 
-    ul {
-      margin: 0;
-      padding: 0;
-
-      li {
-        list-style: none;
-        display: inline;
-
-        a {
-          background-color: $bright-orange;
-          background-image: linear-gradient(to bottom, $light-orange 5%, $bright-orange);
-          color: #FFF;
-          text-decoration: none;
-          padding: 10px;
-          border-radius: 15px;
-
-          &:hover {
-            background: $light-orange;
-          }
-        }
-      }
-    }
+    @extend .orange-buttons;
   }
 }
 
@@ -64,20 +75,38 @@ main {
     thead tr th {
       background: #E1E1E1;
       text-align: left;
-      font-weight: 200;
+      font-weight: 100;
     }
 
     tbody tr {
       border-top: 1px solid #F1F1F1;
+
+      td:last-of-type {
+        @extend .orange-buttons;
+        transition: .5s;
+
+        text-align: right;
+        opacity: .2;
+
+        ul li a {
+          font-size: .75em;
+          padding: 5px 10px;
+        }
+      }
+
+      &:hover td:last-of-type {
+        opacity: 1;
+      }
     }
   }
 
   #data {
     position: absolute;
-    top: 6.6em;
+    top: 108px;
     bottom: 0;
     left: 0;
     right: 0;
     overflow: auto;
+    z-index: 1;
   }
 }
