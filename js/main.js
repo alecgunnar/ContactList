@@ -215,6 +215,8 @@
 
         return false;
       }
+
+      return true;
     },
     flashError: function(msg) {
       var $box;
