@@ -1,0 +1,32 @@
+.form__errors {
+    background: #F00;
+    color: $white;
+    padding: 1rem;
+    padding-left: 2rem;
+    border-radius: .25rem;
+}
+
+.form__row {
+    margin: 10px 0;
+}
+
+.form__row--buttons {
+    text-align: center;
+    margin-bottom: 0;
+
+    button {
+        @extend .button--orange;
+    }
+}
+
+.form__row__label {
+    display: block;
+}
+
+.form__row__input {
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    padding: 5px;
+}

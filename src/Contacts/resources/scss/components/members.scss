@@ -1,0 +1,29 @@
+.members {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.members__header,
+.members__row__box {
+    padding: 7px 1rem;
+}
+
+.members__header {
+    background: $gray;
+    font-weight: 100;
+    text-align: left;
+    width: 25%;
+}
+
+.members__row__box {
+    padding: 1rem inherit;
+}
+
+.members__row:nth-child(even) {
+    background: $light-gray;
+}
+
+.members__row__box--no-results {
+    text-align: center;
+    font-style: italic;
+}

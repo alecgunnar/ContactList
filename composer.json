@@ -1,0 +1,19 @@
+{
+    "name": "gunnar94/contact-list",
+    "description": "Contact manager",
+    "authors": [
+        {
+            "name": "Alec Carpenter",
+            "email": "gunnar94@me.com"
+        }
+    ],
+    "require": {
+        "silex/silex": "~1.3",
+        "twig/twig": "~1.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Contacts": "src"
+        }
+    }
+}

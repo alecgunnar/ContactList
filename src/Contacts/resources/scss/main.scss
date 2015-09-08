@@ -1,0 +1,65 @@
+@import 'variables';
+@import 'mixins';
+
+@import 'lists';
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-weight: $base-font-weight;
+    margin: 0;
+}
+
+.site__wrapper {
+    min-width: 960px;
+    margin: 0 auto;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.header {
+    background: $light-blue;
+    background-image: linear-gradient(to bottom, $light-blue 10%, $bright-blue);
+    line-height: 4rem;
+    padding: 0 $standard-spacing;
+}
+
+.header__branding,
+.header__version {
+    color: $white;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+.header__branding {
+    font-weight: $base-font-weight;
+    margin-right: $standard-spacing;
+}
+
+.header_version__wrapper {
+    background: $bright-blue;
+    padding: 5px 10px;
+    border-radius: 13px;
+}
+
+.header__options {
+    @extend .list--inline;
+
+    float: right;
+}
+
+.header__options__option {
+    button {
+        @extend .button--orange;
+    }
+}
+
+@import 'components';
